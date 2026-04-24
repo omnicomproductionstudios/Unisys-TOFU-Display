@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.13_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/splittext_3.14.2_min.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.unisys.com/";
+    </script>
+  </head>
+
+  <body onload="init()">
+    <div id="main_container">
+      <!--start main_container-->
+      <div id="main_content" class="hidden">
+        <!-- <img src="images/f1.jpg" class="full-width" style="opacity: .5; z-index: 1111;" alt=""> -->
+
+        <img src="images/bg.jpg" class="full-width" alt="">
+       <<div class="copy">Means to<br>endless<br>possibilities.</div>
+      </div>
+
+      <div id="default_exit" class="btn"></div>
+      <!--end main_container-->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      document
+        .getElementById("default_exit")
+        .addEventListener("click", function () {
+          window.open(clickTag, "_blank");
+        });
+    </script>
+  </body>
+</html>
