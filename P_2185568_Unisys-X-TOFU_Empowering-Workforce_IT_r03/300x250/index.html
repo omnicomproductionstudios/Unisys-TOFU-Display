@@ -21,7 +21,22 @@
       <div id="main_content" class="hidden">
         <!-- <img src="images/f1.jpg" class="full-width" style="opacity: .5; z-index: 1111;" alt=""> -->
 
-        <img src="images/bg.jpg" class="full-width" alt="">
+        <div class="background">
+            <div class="water"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <filter id="turbulence" x="0" y="0" width="238" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feTurbulence id="sea-filter" type="turbulence" numOctaves="3" seed="2" baseFrequency="0.011 0.035" result="noise"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="13s" keyTimes="0;0.33;0.66;1" values="0.011 0.035;0.013 0.04;0.015 0.045;0.017 0.05" repeatCount="indefinite"></animate>
+            </filter>
+        </svg>
+
+        <!-- <img src="images/bg.jpg" class="bg" alt=""> -->
+        <img src="images/man.png" class="man" alt="">
+
+        <img src="images/cta.svg" class="cta" id="cta" alt="">
+        <img src="images/logo.svg" class="logo" alt="">
         <div class="copy">IT that helps<br>your team<br>make<br>waves.</div>
       </div>
 

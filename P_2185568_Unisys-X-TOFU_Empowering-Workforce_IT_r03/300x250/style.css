@@ -82,3 +82,63 @@ video {
   left: 20px;
   top: 36px;
 }
+.bg{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+
+/* Background animation */
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0vw;
+  width: 238px;
+  height: 189px;
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  border-radius: 0 0 0 36px;
+  overflow: hidden;
+}
+
+.background .water {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 238px;
+    height: 189px;
+    background-image: url(images/bg.jpg);
+    background-size: 238px 189px;
+    background-position: 0px 0px;
+    filter: url("#turbulence");
+    -webkit-filter: url("#turbulence");
+}
+#turbulence{
+    position: absolute;
+    width: 238px;
+    height: 189px;
+    left: 0px;
+    top: 0px;
+}
+
+
+.man{
+  width: 97px;
+  left: 174px;
+  top: 88px;
+  scale: 0.6;
+}
+.cta{
+  width: 22px;
+  height: 22px;
+  top: 207px;
+  left: 22px;
+}
+.logo{
+  width: 97px;
+  height: 19px;
+  right: 22px;
+  bottom: 22px;
+}
