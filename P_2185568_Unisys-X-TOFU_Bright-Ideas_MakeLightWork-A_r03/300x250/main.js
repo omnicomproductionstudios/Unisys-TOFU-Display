@@ -20,7 +20,16 @@ function animate() {
   tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5);
 }
 
+const fireSound = new Audio('firecracker_hiss.mp3');
+fireSound.loop = true;
 
+document.querySelector('.container').addEventListener('mouseenter', () => {
+    fireSound.play();
+});
+
+document.querySelector('.container').addEventListener('mouseleave', () => {
+    fireSound.pause();
+});
 function setRollover() {
   document
     .getElementById("default_exit")
