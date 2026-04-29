@@ -82,3 +82,39 @@ video {
   left: 20px;
   top: 24px;
 }
+.bg{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.road{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.cta{
+  width: 22px;
+  height: 22px;
+  top: 207px;
+  left: 22px;
+}
+.logo{
+  width: 97px;
+  height: 19px;
+  right: 22px;
+  bottom: 22px;
+}
+.wrap{
+  width: 238px;
+  height: 189px;
+  overflow: hidden;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.dots{
+  left: -84px;
+  top: 8px;
+}
