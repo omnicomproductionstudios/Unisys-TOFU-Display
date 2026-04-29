@@ -18,7 +18,7 @@ function animate() {
 
 
   tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
-  .to(".cloud", 8, { x:0, ease: "power2.out" }, 0.5)
+  .to(".cloud", 15, { x:0, ease: "power1.inOut" }, -2)
 }
 
 function setRollover() {
