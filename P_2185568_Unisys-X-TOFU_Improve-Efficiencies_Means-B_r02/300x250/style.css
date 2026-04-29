@@ -20,7 +20,7 @@ video {
 
 #main_container {
   position: absolute;
-  background-color: #cfff8f;
+  background-color: #007173;
   border: 1px solid #000000;
   overflow: hidden;
   -webkit-box-sizing: border-box;
@@ -81,4 +81,28 @@ video {
   line-height: 36px;
   left: 20px;
   top: 25px;
+}
+.bg{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.lights{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.cta{
+  width: 22px;
+  height: 22px;
+  top: 207px;
+  left: 22px;
+}
+.logo{
+  width: 97px;
+  height: 19px;
+  right: 22px;
+  bottom: 22px;
 }

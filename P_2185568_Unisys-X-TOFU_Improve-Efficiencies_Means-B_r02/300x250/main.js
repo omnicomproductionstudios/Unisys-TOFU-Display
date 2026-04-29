@@ -17,7 +17,8 @@ function animate() {
 
 
 
-  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5);
+  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
+  .fromTo(".lights", { clipPath: "inset(100% 0 0 0)" },{ clipPath: "inset(0% 0 0 0)", duration: 2, ease: "power2.out" });
   // tl.set([logo, img, bg1, bg2, bg3, bg4, copy1, copy2, copy3, copy4, cta], {force3D: true});
   // tl.set([copy2, copy3, copy4], { xPercent: -120 });
   // tl.set([bg4], { y: 260 });
