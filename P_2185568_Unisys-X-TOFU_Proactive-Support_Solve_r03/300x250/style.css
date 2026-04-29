@@ -82,3 +82,39 @@ video {
   left: 20px;
   top: 34px;
 }
+
+.wrap{
+  width: 238px;
+  height: 189px;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.patch{
+  width: 68px;
+  right: 0px;
+  top: 0px;
+  z-index: 11;
+}
+.cloud{
+  width: 168px;
+  transform: translateX(-140px);
+}
+.bg{
+  width: 238px;
+  right: 0px;
+  top: 0px;
+  border-radius: 0 0 0 36px;
+}
+.cta{
+  width: 22px;
+  height: 22px;
+  top: 207px;
+  left: 22px;
+}
+.logo{
+  width: 97px;
+  height: 19px;
+  right: 22px;
+  bottom: 22px;
+}

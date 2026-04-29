@@ -18,7 +18,7 @@ function animate() {
 
 
   tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
-  .fromTo(".lights", { clipPath: "inset(100% 0 0 0)" },{ clipPath: "inset(0% 0 0 0)", duration: 2, ease: "power2.out" });
+  .fromTo(".lights", { clipPath: "inset(100% 0 0 0)" },{ clipPath: "inset(0% 0 0 0)", duration: 2, ease: "power2.out" }, 0.5);
 }
 
 function setRollover() {

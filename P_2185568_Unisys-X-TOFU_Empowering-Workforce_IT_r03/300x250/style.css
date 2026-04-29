@@ -128,7 +128,7 @@ video {
   width: 97px;
   left: 174px;
   top: 88px;
-  scale: 0.6;
+  transform: translateX(-30px) scale(0.5);
 }
 .cta{
   width: 22px;

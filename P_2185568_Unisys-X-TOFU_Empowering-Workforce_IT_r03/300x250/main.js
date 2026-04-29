@@ -17,8 +17,8 @@ function animate() {
 
 
 
-  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, "0.5")
-  .to(".man", 8, {scale: 1, ease: "power2.inOut" }, "-0.5")
+  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
+  .to(".man", 8, {scale: 1, x:0, ease: "power2.inOut" }, 0.5)
 }
 
 function setRollover() {
