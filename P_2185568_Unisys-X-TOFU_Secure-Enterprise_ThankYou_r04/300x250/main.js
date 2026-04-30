@@ -18,7 +18,19 @@ function animate() {
 
 
   tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
-  .fromTo(".dots", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 2, ease: "power2.out" }, "+=0.3");
+  // .fromTo(".dots", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 2, ease: "power2.out" }, "+=0.3");
+  gsap.utils.toArray(".dot").forEach(dot => {
+  function flicker() {
+    gsap.to(dot, {
+      opacity: gsap.utils.random(0.1, 1),
+      scale: gsap.utils.random(0.6, 1.4),
+      duration: gsap.utils.random(0.05, 0.4),
+      ease: "power1.out",
+      onComplete: flicker
+    });
+  }
+  flicker();
+});
 }
 
 function setRollover() {

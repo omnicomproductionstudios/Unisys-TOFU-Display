@@ -96,9 +96,14 @@ video {
   top: 0px;
   z-index: 11;
 }
+.could-wrap{
+  width: 174px;
+  height: 80px;
+  overflow: hidden;
+}
 .cloud{
-  width: 168px;
-  transform: translateX(-140px);
+  width: 250px;
+  transform: translate(-100px, 7px);
 }
 .bg{
   width: 238px;

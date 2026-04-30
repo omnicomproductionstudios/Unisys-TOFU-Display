@@ -16,7 +16,7 @@ function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
   tl.set(".road", { willChange: "clip-path" });
   tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
-  .fromTo(".road", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 2, ease: "power2.out" }, 0.5);
+  .fromTo(".road", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 2, ease: "power2.out" }, 0.2);
 }
 
 function setRollover() {

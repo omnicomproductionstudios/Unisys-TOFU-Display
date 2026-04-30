@@ -11,13 +11,33 @@ function init() {
 }
 
 const split = new SplitText(".copy", { type: "words" });
-
+const dots = gsap.utils.toArray(".cls-2");
 function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
+  // tl.set(".lights", { willChange: "clip-path" });
+  gsap.set(dots, { opacity: 0 });
 
+  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
+  // .fromTo(".lights", { clipPath: "inset(100% 0 0 0)" },{ clipPath: "inset(0% 0 0 0)", duration: 2, ease: "power2.out" }, 0.5);
+  
 
+  
+  gsap.utils.shuffle(dots);
 
-  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5);
+// one by one show
+dots.forEach((dot, i) => {
+  gsap.to(dot, {
+    delay: i * 0.005,
+    keyframes: [
+      { opacity: 0.2, duration: 0.03 },
+      { opacity: 1, duration: 0.05 },
+      { opacity: 0.3, duration: 0.03 },
+      { opacity: 1, duration: 0.08 }
+    ],
+    ease: "power1.out"
+  });
+});
+
 }
 
 function setRollover() {

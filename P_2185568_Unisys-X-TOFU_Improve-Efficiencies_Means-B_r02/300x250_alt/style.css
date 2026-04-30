@@ -20,7 +20,7 @@ video {
 
 #main_container {
   position: absolute;
-  background-color: #003134;
+  background-color: #007173;
   border: 1px solid #000000;
   overflow: hidden;
   -webkit-box-sizing: border-box;
@@ -76,32 +76,66 @@ video {
 .copy{
   font-family: "heading_font";
   color: #00ffff;
-  font-size: 39px;
-  letter-spacing: -1.5px;
-  line-height: 39px;
-  left: 19px;
+  font-size: 35px;
+  letter-spacing: -1.4px;
+  line-height: 36px;
+  left: 20px;
   top: 25px;
 }
-
 .bg{
   width: 238px;
   right: 0px;
   top: 0px;
   border-radius: 0 0 0 36px;
 }
-
-.road1{
+.lights-wrap{
   width: 238px;
+  height: 250px;
   right: 0px;
   top: 0px;
+  overflow: hidden;
   border-radius: 0 0 0 36px;
-  opacity: 0.5;
 }
-.road{
+.lights{
   width: 238px;
   right: 0px;
   top: 0px;
   border-radius: 0 0 0 36px;
+  opacity: 0;
+  filter: brightness(0.7) saturate(0.85) blur(2.5px);
+  transform: scale(1.012);
+  transform-origin: center center;
+  mix-blend-mode: screen;
+}
+.lights-1{
+  clip-path: polygon(0% 0%, 19% 0%, 17% 35%, 0% 43%);
+}
+.lights-2{
+  clip-path: polygon(16% 0%, 37% 0%, 39% 33%, 19% 38%);
+}
+.lights-3{
+  clip-path: polygon(36% 0%, 58% 0%, 57% 30%, 40% 38%);
+}
+.lights-4{
+  clip-path: polygon(56% 0%, 81% 0%, 79% 34%, 60% 30%);
+}
+.lights-5{
+  clip-path: polygon(79% 0%, 100% 0%, 100% 39%, 79% 32%);
+}
+.lights-6{
+  clip-path: polygon(0% 33%, 25% 28%, 24% 63%, 0% 72%);
+}
+.lights-7{
+  clip-path: polygon(23% 29%, 46% 25%, 48% 68%, 23% 74%);
+}
+.lights-8{
+  clip-path: polygon(45% 26%, 69% 21%, 72% 74%, 47% 79%);
+}
+.lights-9{
+  clip-path: polygon(67% 28%, 88% 24%, 92% 79%, 70% 83%);
+}
+.lights-10{
+  clip-path: polygon(86% 29%, 100% 24%, 100% 100%, 84% 100%);
 }
 .cta{
   width: 22px;

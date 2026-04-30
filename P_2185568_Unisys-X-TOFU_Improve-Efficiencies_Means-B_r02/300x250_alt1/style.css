@@ -20,7 +20,7 @@ video {
 
 #main_container {
   position: absolute;
-  background-color: #003134;
+  background-color: #007173;
   border: 1px solid #000000;
   overflow: hidden;
   -webkit-box-sizing: border-box;
@@ -76,29 +76,21 @@ video {
 .copy{
   font-family: "heading_font";
   color: #00ffff;
-  font-size: 39px;
-  letter-spacing: -1.5px;
-  line-height: 39px;
-  left: 19px;
+  font-size: 35px;
+  letter-spacing: -1.4px;
+  line-height: 36px;
+  left: 20px;
   top: 25px;
 }
-
 .bg{
   width: 238px;
   right: 0px;
   top: 0px;
   border-radius: 0 0 0 36px;
 }
-
-.road1{
+.lights{
   width: 238px;
-  right: 0px;
-  top: 0px;
-  border-radius: 0 0 0 36px;
-  opacity: 0.5;
-}
-.road{
-  width: 238px;
+  height: 189px;
   right: 0px;
   top: 0px;
   border-radius: 0 0 0 36px;

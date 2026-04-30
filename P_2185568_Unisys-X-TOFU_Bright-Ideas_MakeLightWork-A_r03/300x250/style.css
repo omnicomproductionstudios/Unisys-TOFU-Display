@@ -89,6 +89,18 @@ video {
   top: 0px;
   border-radius: 0 0 0 36px;
 }
+.logo{
+  width: 97px;
+  height: 19px;
+  right: 22px;
+  bottom: 22px;
+}
+.cta{
+  width: 22px;
+  height: 22px;
+  top: 207px;
+  left: 22px;
+}
 
 .banner {
   width: 300px; /* Ad size */
@@ -145,7 +157,6 @@ video {
 .firecracker-image {
   width: 100px;
   height: 100px;
-  background: url(2.jpg) center / cover;
   position: absolute;
   animation: jitter 0.1s infinite;
   left: 154px;
@@ -163,7 +174,7 @@ video {
   border-radius: 50%;
   box-shadow: 0 0 20px 10px #fff, 0 0 40px 20px gold;
   transform: translate(-50%, -50%);
-  animation: pulse-core 0.05s infinite alternate;
+  animation: pulse-core 0.4s infinite alternate;
 }
 
 /* Extreme Glow */
@@ -177,6 +188,7 @@ video {
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
   animation: flicker 0.1s infinite;
+
 }
 
 /* Animations */
@@ -188,11 +200,11 @@ video {
 }
 
 @keyframes pulse-core {
-  from { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-  to { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  to { transform: translate(-50%, -50%) scale(1.5); opacity: 0.6; }
 }
 
 @keyframes flicker {
-  0% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+  0% { opacity: 0.1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1.2); }
 }
