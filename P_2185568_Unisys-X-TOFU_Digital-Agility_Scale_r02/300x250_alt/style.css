@@ -89,18 +89,24 @@ video {
   top: 0px;
   border-radius: 0 0 0 36px;
 }
-.road1{
+.image_wrap{
   width: 238px;
+  height: 189px;
   right: 0px;
   top: 0px;
   border-radius: 0 0 0 36px;
+  overflow: hidden;
 }
-.road{
-  width: 238px;
-  right: 0px;
-  top: 0px;
-  border-radius: 0 0 0 36px;
+#Layer_1{
+  width: 380px;
+  right: -135px;
+  top: -20px;
 }
+/* .cls-1 {
+  fill: none;
+  stroke: #ff3b3b;
+  stroke-width: 3;
+} */
 .cta{
   width: 22px;
   height: 22px;

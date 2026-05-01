@@ -1,10 +1,10 @@
 var tl;
-var tl2;
 var startTime;
-
+var paths;
 
 function init() {
   startTime = new Date();
+  paths = document.querySelectorAll(".cls-1");
   tl = gsap.timeline({ onComplete: logDuration });
   animate();
   setRollover();
@@ -13,35 +13,60 @@ function init() {
 const split = new SplitText(".copy", { type: "words" });
 
 function animate() {
-  tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
-  tl.set(".road", { willChange: "clip-path" });
-  tl.from(split.words, 0.5, { y: 15, opacity: 0, filter: "blur(7px)", stagger: 0.2, ease: "power2.out" }, 0.5)
-  .fromTo(".road", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 2, ease: "power2.out" }, 0.5);
+  tl.set("#main_content", { autoAlpha: 1 });
+
+  tl.from(split.words, {
+    y: 15,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 0.4,
+    ease: "power2.out"
+  }, 0.3);
+
+  animateSvgBuild();
+}
+
+function animateSvgBuild() {
+  if (!paths.length) return;
+
+  const orderedPaths = Array.from(paths).sort(function (a, b) {
+    return a.getBBox().y - b.getBBox().y;
+  });
+
+  orderedPaths.forEach(function (path) {
+    const length = path.getTotalLength();
+
+    gsap.set(path, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+      opacity: 0.4
+    });
+  });
+
+  tl.to(orderedPaths, {
+    strokeDashoffset: 0,
+    duration: 0.11,
+    stagger: {
+      each: 0.001
+    },
+    ease: "none",
+  }, 1);
 }
 
 function setRollover() {
-  document
-    .getElementById("default_exit")
-    .addEventListener("mouseover", defaultOver, false);
-  document
-    .getElementById("default_exit")
-    .addEventListener("mouseout", defaultOut, false);
+  const exit = document.getElementById("default_exit");
+  exit.addEventListener("mouseover", defaultOver);
+  exit.addEventListener("mouseout", defaultOut);
 }
 
 function defaultOver() {
-  gsap.to("#cta", 0.15, { scale: 1.1, ease: Power1.easeInOut });
+  gsap.to("#cta", { scale: 1.1, duration: 0.15 });
 }
 
 function defaultOut() {
-  gsap.to("#cta", 0.15, { scale: 1, ease: Power1.easeInOut });
+  gsap.to("#cta", { scale: 1, duration: 0.15 });
 }
 
-
 function logDuration() {
-  let endTime = new Date();
-  console.log(
-    "Animation duration: " +
-      ((endTime - startTime) / 1000).toFixed(2) +
-      " seconds",
-  );
+  console.log("Duration:", ((new Date() - startTime) / 1000).toFixed(2));
 }

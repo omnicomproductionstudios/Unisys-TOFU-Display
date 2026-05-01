@@ -104,23 +104,42 @@ video {
 }
 
 .background .water {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 238px;
-    height: 189px;
-    background-image: url(images/bg.jpg);
-    background-size: 238px 189px;
-    background-position: 0px 0px;
-    filter: url("#turbulence");
-    -webkit-filter: url("#turbulence");
+  position: absolute;
+  inset: 0;
+  background-image: url(images/bg.jpg);
+  background-size: 238px 200px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
-#turbulence{
-    position: absolute;
-    width: 238px;
-    height: 189px;
-    left: 0px;
-    top: 0px;
+
+.background .water-top {
+  filter: url("#turbulence-top");
+  -webkit-filter: url("#turbulence-top");
+  clip-path: polygon(0 0, 100% 0, 100% 34%, 87% 49%, 76% 63%, 59% 79%, 32% 100%, 0 100%);
+  -webkit-mask-image: radial-gradient(circle at 36% 42%, #000 0 58%, transparent 84%);
+  mask-image: radial-gradient(circle at 36% 42%, #000 0 58%, transparent 84%);
+}
+
+.background .water-mid {
+  filter: url("#turbulence-mid");
+  -webkit-filter: url("#turbulence-mid");
+  clip-path: polygon(63% 6%, 100% 9%, 100% 73%, 77% 87%, 62% 100%, 53% 100%, 57% 80%, 67% 55%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0 47%, rgba(0, 0, 0, 0.82) 60%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0 47%, rgba(0, 0, 0, 0.82) 60%, #000 78%, transparent 100%);
+}
+
+.background .water-bottom {
+  filter: url("#turbulence-bottom");
+  -webkit-filter: url("#turbulence-bottom");
+  clip-path: polygon(44% 72%, 74% 66%, 100% 56%, 100% 100%, 44% 100%, 36% 92%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0 64%, rgba(0, 0, 0, 0.82) 78%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0 64%, rgba(0, 0, 0, 0.82) 78%, #000 100%);
+}
+
+svg {
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 

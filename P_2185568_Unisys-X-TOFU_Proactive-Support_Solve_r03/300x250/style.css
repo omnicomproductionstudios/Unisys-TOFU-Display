@@ -97,13 +97,15 @@ video {
   z-index: 11;
 }
 .could-wrap{
-  width: 174px;
-  height: 80px;
+  width: 170px;
+  height: 102px;
   overflow: hidden;
+  top: 6px;
 }
 .cloud{
-  width: 250px;
-  transform: translate(-100px, 7px);
+  /* width: 310px; */
+  width: 179px;
+  transform: translate(-50px, 7px);
 }
 .bg{
   width: 238px;

@@ -22,13 +22,25 @@
         <!-- <img src="images/f1.jpg" class="full-width" style="opacity: .5; z-index: 1111;" alt=""> -->
 
         <div class="background">
-            <div class="water"></div>
+            <div class="water water-top"></div>
+            <div class="water water-mid"></div>
+            <div class="water water-bottom"></div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg">
-            <filter id="turbulence" x="0" y="0" width="238" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feTurbulence id="sea-filter" type="turbulence" numOctaves="3" seed="2" baseFrequency="0.011 0.035" result="noise"></feTurbulence>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-                <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="6s" keyTimes="0;0.33;0.66;1" values="0.011 0.035;0.013 0.04;0.015 0.045;0.017 0.05" repeatCount="indefinite"></animate>
+            <filter id="turbulence-top" x="0" y="0" width="238" height="250" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feTurbulence id="sea-filter-top" type="turbulence" numOctaves="3" seed="2" baseFrequency="0.013 0.04" result="noise"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                <animate xlink:href="#sea-filter-top" attributeName="baseFrequency" dur="5.5s" keyTimes="0;0.33;0.66;1" values="0.013 0.04;0.016 0.048;0.019 0.055;0.013 0.04" repeatCount="indefinite"></animate>
+            </filter>
+            <filter id="turbulence-mid" x="0" y="0" width="238" height="250" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feTurbulence id="sea-filter-mid" type="turbulence" numOctaves="3" seed="4" baseFrequency="0.01 0.03" result="noise"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                <animate xlink:href="#sea-filter-mid" attributeName="baseFrequency" dur="5.5s" keyTimes="0;0.33;0.66;1" values="0.01 0.03;0.012 0.036;0.014 0.04;0.01 0.03" repeatCount="indefinite"></animate>
+            </filter>
+            <filter id="turbulence-bottom" x="0" y="0" width="238" height="250" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feTurbulence id="sea-filter-bottom" type="turbulence" numOctaves="2" seed="6" baseFrequency="0.007 0.02" result="noise"></feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                <animate xlink:href="#sea-filter-bottom" attributeName="baseFrequency" dur="7s" keyTimes="0;0.33;0.66;1" values="0.007 0.02;0.0085 0.024;0.01 0.028;0.007 0.02" repeatCount="indefinite"></animate>
             </filter>
         </svg>
 

@@ -90,7 +90,7 @@ video {
 }
 .lights-wrap{
   width: 238px;
-  height: 250px;
+  height: 189px;
   right: 0px;
   top: 0px;
   overflow: hidden;
@@ -102,10 +102,17 @@ video {
   top: 0px;
   border-radius: 0 0 0 36px;
   opacity: 0;
-  filter: brightness(0.7) saturate(0.85) blur(2.5px);
+  /* filter: brightness(0.7) saturate(0.85) blur(2.5px); */
   transform: scale(1.012);
   transform-origin: center center;
   mix-blend-mode: screen;
+}
+.lights{
+  /* opacity: 0; */
+  /* filter: brightness(0.9) saturate(1) blur(0.8px); */
+  transform: scale(1.08);
+  /* mix-blend-mode: screen; */
+  /* opacity: 0.9; */
 }
 .lights-1{
   clip-path: polygon(0% 0%, 19% 0%, 17% 35%, 0% 43%);
